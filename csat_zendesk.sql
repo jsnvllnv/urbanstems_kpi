@@ -8,7 +8,7 @@
 	agent_name,
 	supervisor,
 	'csat_p' as kpi_metric,
-	score,
+	score::numeric as score,
 	(select target from sd_performance_target where client_account = 'urbanstems' 
 		and channel = 'overall' and kpi = 'csat' and (local_date_created between start_date and end_date))	
 		as target,
@@ -228,7 +228,7 @@ union all
 	agent_name,
 	supervisor,
 	'csat_p' as kpi_metric,
-	score,
+	score::numeric as score,
 	(select target from sd_performance_target where client_account = 'urbanstems' 
 		and channel = 'overall' and kpi = 'csat' and (local_date_created between start_date and end_date))	
 		as target,
@@ -448,7 +448,7 @@ union all
 	agent_name,
 	supervisor,
 	'csat_p' as kpi_metric,
-	score,
+	score::numeric as score,
 	(select target from sd_performance_target where client_account = 'urbanstems' 
 		and channel = 'overall' and kpi = 'csat' and (local_date_created between start_date and end_date))	
 		as target,
@@ -668,7 +668,7 @@ union all
 	agent_name,
 	supervisor,
 	'csat_p' as kpi_metric,
-	score,
+	score::numeric as score,
 	(select target from sd_performance_target where client_account = 'urbanstems' 
 		and channel = 'overall' and kpi = 'csat' and (local_date_created between start_date and end_date))	
 		as target,
@@ -888,7 +888,7 @@ union all
 	agent_name,
 	supervisor,
 	'csat_p' as kpi_metric,
-	score,
+	score::numeric as score,
 	(select target from sd_performance_target where client_account = 'urbanstems' 
 		and channel = 'overall' and kpi = 'csat' and (local_date_created between start_date and end_date))	
 		as target,
@@ -1108,7 +1108,7 @@ union all
 	agent_name,
 	supervisor,
 	'csat_p' as kpi_metric,
-	score,
+	score::numeric as score,
 	(select target from sd_performance_target where client_account = 'urbanstems' 
 		and channel = 'overall' and kpi = 'csat' and (local_date_created between start_date and end_date))	
 		as target,
@@ -1328,7 +1328,7 @@ union all
 	agent_name,
 	supervisor,
 	'csat_p' as kpi_metric,
-	score,
+	score::numeric as score,
 	(select target from sd_performance_target where client_account = 'urbanstems' 
 		and channel = 'overall' and kpi = 'csat' and (local_date_created between start_date and end_date))	
 		as target,
@@ -1548,7 +1548,7 @@ union all
 	agent_name,
 	supervisor,
 	'csat_p' as kpi_metric,
-	score,
+	score::numeric as score,
 	(select target from sd_performance_target where client_account = 'urbanstems' 
 		and channel = 'overall' and kpi = 'csat' and (local_date_created between start_date and end_date))	
 		as target,
@@ -1768,7 +1768,7 @@ union all
 	agent_name,
 	supervisor,
 	'csat_p' as kpi_metric,
-	score,
+	score::numeric as score,
 	(select target from sd_performance_target where client_account = 'urbanstems' 
 		and channel = 'overall' and kpi = 'csat' and (local_date_created between start_date and end_date))	
 		as target,
