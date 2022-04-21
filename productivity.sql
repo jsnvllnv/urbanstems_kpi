@@ -11,7 +11,7 @@
 	'prod_d' as kpi_metric,
 --	d_tickets,
 --	d_dur/3600 as d_dur,
-	d_prod as score,
+	d_prod::numeric as score,
 	(select target 
         from kpi_data_warehouse.sd_performance_target 
         where client_account = 'urbanstems' 
@@ -382,7 +382,7 @@ union all
 	agent_name,
 	supervisor,
 	kpi_metric,
-	round((d_tickets_t::float/d_dur_t)::numeric,2) as score,
+	round((d_tickets_t::float/d_dur_t)::numeric,2)::numeric as score,
 	(select target 
         from kpi_data_warehouse.sd_performance_target 
         where client_account = 'urbanstems' 
@@ -783,7 +783,7 @@ union all
 	agent_name,
 	supervisor,
 	kpi_metric,
-	round((d_tickets_t::float/d_dur_t)::numeric,2) as score,
+	round((d_tickets_t::float/d_dur_t)::numeric,2)::numeric as score,
 	(select target 
         from kpi_data_warehouse.sd_performance_target 
         where client_account = 'urbanstems' 
@@ -1186,7 +1186,7 @@ union all
 	'prod_d' as kpi_metric,
 --	w_tickets,
 --	w_dur/3600 as d_dur,
-	w_prod as score,
+	w_prod::numeric as score,
 	(select target 
         from kpi_data_warehouse.sd_performance_target 
         where client_account = 'urbanstems' 
@@ -1557,7 +1557,7 @@ union all
 	'Team Total' as agent_name,
 	'Team Total' as supervisor,
 	kpi_metric,
-	w_tickets_t::float/w_dur_t as score,
+	(w_tickets_t::float/w_dur_t)::numeric as score,
 	(select target 
         from kpi_data_warehouse.sd_performance_target 
         where client_account = 'urbanstems' 
@@ -1947,7 +1947,7 @@ union all
 	'Team Total' as agent_name,
 	supervisor,
 	kpi_metric,
-	w_tickets_v::float/w_dur_v as score,
+	(w_tickets_v::float/w_dur_v)::numeric as score,
 	(select target 
         from kpi_data_warehouse.sd_performance_target 
         where client_account = 'urbanstems' 
@@ -2339,7 +2339,7 @@ union all
 	'prod_d' as kpi_metric,
 --	m_tickets,
 --	m_dur/3600 as d_dur,
-	m_prod as score,
+	m_prod::numeric as score,
 	(select target 
         from kpi_data_warehouse.sd_performance_target 
         where client_account = 'urbanstems' 
@@ -2712,7 +2712,7 @@ union all
 	kpi_metric,
 --	m_tickets_t,
 --	m_dur_t,
-	m_tickets_t::float/m_dur_t as score,
+	(m_tickets_t::float/m_dur_t)::numeric as score,
 	(select target 
         from kpi_data_warehouse.sd_performance_target 
         where client_account = 'urbanstems' 
@@ -3104,7 +3104,7 @@ union all
 	kpi_metric,
 --	m_tickets_v,
 --	m_dur_v,
-	m_tickets_v::float/m_dur_v as score,
+	(m_tickets_v::float/m_dur_v)::numeric as score,
 	(select target 
         from kpi_data_warehouse.sd_performance_target 
         where client_account = 'urbanstems' 
