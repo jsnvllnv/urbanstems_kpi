@@ -9,7 +9,7 @@
 	agent_name,
 	supervisor,
 	'frt_d' as kpi_metric,
-	daily as score,
+	daily::numeric as score,
 	(select target from sd_performance_target 
 		where client_account = 'urbanstems' 
 		and channel = 'chat' 
@@ -185,7 +185,7 @@ union all
 	'Team Total' as agent_name,
 	'Team Total' as supervisor,
 	'frt_d' as kpi_metric,
-	t_daily as score,
+	t_daily::numeric as score,
 	(select target from sd_performance_target 
 		where client_account = 'urbanstems' 
 		and channel = 'chat' 
@@ -361,7 +361,7 @@ union all
 	'Team Total' as agent_name,
 	supervisor,
 	'frt_d' as kpi_metric,
-	v_daily as score,
+	v_daily::numeric as score,
 	(select target from sd_performance_target 
 		where client_account = 'urbanstems' 
 		and channel = 'chat' 
@@ -537,7 +537,7 @@ union all
 	agent_name,
 	supervisor,
 	'frt_d' as kpi_metric,
-	weekly as score,
+	weekly::numeric as score,
 	(select target from sd_performance_target 
 		where client_account = 'urbanstems' 
 		and channel = 'chat' 
@@ -713,7 +713,7 @@ union all
 	'Team Total' as agent_name,
 	'Team Total' as supervisor,
 	'frt_d' as kpi_metric,
-	t_weekly as score,
+	t_weekly::numeric as score,
 	(select target from sd_performance_target 
 		where client_account = 'urbanstems' 
 		and channel = 'chat' 
@@ -889,7 +889,7 @@ union all
 	'Team Total' as agent_name,
 	supervisor,
 	'frt_d' as kpi_metric,
-	v_weekly as score,
+	v_weekly::numeric as score,
 	(select target from sd_performance_target 
 		where client_account = 'urbanstems' 
 		and channel = 'chat' 
@@ -1065,7 +1065,7 @@ union all
 	agent_name,
 	supervisor,
 	'frt_d' as kpi_metric,
-	monthly as score,
+	monthly::numeric as score,
 	(select target from sd_performance_target 
 		where client_account = 'urbanstems' 
 		and channel = 'chat' 
@@ -1241,7 +1241,7 @@ union all
 	'Team Total' as agent_name,
 	'Team Total' as supervisor,
 	'frt_d' as kpi_metric,
-	t_monthly as score,
+	t_monthly::numeric as score,
 	(select target from sd_performance_target 
 		where client_account = 'urbanstems' 
 		and channel = 'chat' 
@@ -1417,7 +1417,7 @@ union all
 	'Team Total' as agent_name,
 	supervisor,
 	'frt_d' as kpi_metric,
-	v_monthly as score,
+	v_monthly::numeric as score,
 	(select target from sd_performance_target 
 		where client_account = 'urbanstems' 
 		and channel = 'chat' 
